@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href=" https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+      rel="stylesheet"
+    />
     <link href="./css/style.css" rel="stylesheet" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
       rel="stylesheet"
@@ -13,33 +18,36 @@
   <body>
     <div class="container">
       <div class="header">
-        <div class="logo">
-          <img class="logo__image" src="./img/image/logo.png" alt="logo" />
+        <div class="header_left">
+          <a class="logo" href="#">
+            <img class="logo" src="./img/image/logo.png" alt="logo" />
+          </a>
+
+          <a class="button" href="#">
+            Top
+          </a>
+          <a class="button" href="#">
+            Painters
+          </a>
+          <a class="button" href="#">
+            Design
+          </a>
+          <a class="button" href="#">
+            Tags
+          </a>
         </div>
-        <nav class="menu">
-          <button class="menu__button">
-            <span class="menu__text">Top</span>
-          </button>
-          <button class="menu__button">
-            <span class="menu__text">Painters</span>
-          </button>
-          <button class="menu__button">
-            <span class="menu__text">Design</span>
-          </button>
-          <button class="menu__button">
-            <span class="menu__text">Tags</span>
-          </button>
-        </nav>
-        <div class="search">
-          <img class="search__image" src="./img/fonts/Shape.png" alt="shape" />
-          <input class="search__input" type="search" value="" />
-        </div>
-        <div class="filter">
-          <img
-            class="filter__image"
-            src="./img/image/filter.png"
-            alt="filter"
-          />
+        <div class="header_right">
+          <div class="search">
+            <img class="search__icon" src="./img/fonts/Shape.png" alt="shape" />
+            <input
+              class="search__input"
+              type="search"
+              value=""
+              placeholder="Search"
+            />
+          </div>
+
+          <img class="filter" src="./img/image/filter.png" alt="filter" />
         </div>
       </div>
       <div class="gallery"></div>

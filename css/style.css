@@ -1,97 +1,91 @@
-.container {
-  display: grid;
-  grid-template-columns: 180px auto 180px;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "none header . "
-    ". gallery . "
-    ". bar . ";
+/* Стили для режима dark  */
+
+.dark {
   background-color: #222222;
 }
-
-.header {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: "logo menu  search filter";
-  height: 90px;
-  width: 1440;
-}
-.gallery {
-  grid-area: gallery;
-}
-.bar {
-  grid-area: bar;
-}
-
-.logo {
-  grid-area: logo;
-}
-.menu {
-  grid-area: menu;
-}
-.search {
-  grid-area: search;
-}
-.filter {
-  grid-area: filter;
-}
-
-.logo__image {
-  position: absolute;
-  top: 37px;
-  height: 17px;
-}
-.menu {
-  position: absolute;
-  top: 26px;
-  left: 326px;
-}
-.menu__button {
-  width: 86px;
-  height: 40px;
-  border-radius: 6px;
+.dark .button {
   border: solid 1px #363636;
   background-color: #1b1b1b;
-}
-.menu__text {
-  width: 86px;
-  height: 19px;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
   color: #ffffff;
 }
+.dark .search {
+  background-color: #363636;
+}
+.dark .search__icon {
+  color: #979797;
+}
+.dark .search__input {
+  background-color: #363636;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+/* Стили для меню  */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+  margin-bottom: 24px;
+}
+.header_left {
+  display: flex;
+  align-items: center;
+}
+.header_left a {
+  text-decoration: none;
+}
+.header_left .button {
+  margin-right: 18px;
+}
+.button {
+  display: inline-block;
+  width: 86px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+}
+.button:last-child {
+  margin-right: 0;
+}
+.header_left .logo {
+  margin-right: 42px;
+}
+.header_right {
+  display: flex;
+}
+
 .search {
-  position: absolute;
-  top: 26px;
-  left: 800px;
   width: 356px;
   height: 40px;
   border-radius: 10px;
-  background-color: #363636;
 }
-.search__image {
+.search__icon {
+  margin-left: 16px;
+  margin-right: 7px;
   width: 15px;
   height: 15px;
-  color: #979797;
 }
 .search__input {
   border: none;
   width: 300px;
   height: 40px;
-  background-color: #363636;
 }
-
-.filter__image {
-  position: absolute;
-  top: 26px;
-  left: 1185px;
+.header_right .filter {
+  margin-left: 29px;
+}
+.filter {
   width: 40px;
   height: 40px;
   border-radius: 6px;
