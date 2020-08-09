@@ -8,15 +8,17 @@
       rel="stylesheet"
     />
     <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/media.css" rel="stylesheet" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
       rel="stylesheet"
     />
+
     <title>Молочная культура</title>
   </head>
   <body>
-    <div class="container">
+    <div id="app" class="container">
       <div class="header">
         <div class="header_left">
           <a class="logo" href="#">
@@ -46,12 +48,108 @@
               placeholder="Search"
             />
           </div>
-
-          <img class="filter" src="./img/image/filter.png" alt="filter" />
+          <span class="icn show filter"></span>
         </div>
       </div>
-      <div class="gallery"></div>
-      <div class="bar"></div>
+      <div
+        v-infinite-scroll="loadMore"
+        infinite-scroll-distance="10"
+        class="gallery"
+      >
+        <div v-for="img in images" class="picture">
+          <img :src="img.src" alt="" />
+        </div>
+      </div>
+      <div class="bar-container">
+        <div class="bar">
+          <div class="icon-text">
+            <a href="#">
+              <div>
+                <span class="icn icon feed__icon"></span>
+              </div>
+              <span>Feed</span>
+            </a>
+          </div>
+          <div class="icon-text">
+            <a href="#">
+              <div>
+                <span class="icn icon menu__icon"></span>
+              </div>
+              <span>Gallery</span>
+            </a>
+          </div>
+          <div class="icon-text">
+            <a href="#">
+              <div>
+                <span class="icn icon add__icon"></span>
+              </div>
+              <span>Deals</span>
+            </a>
+          </div>
+          <div class="icon-text">
+            <a href="#">
+              <div>
+                <span class="icn icon chat__icon"></span>
+              </div>
+              <span>Notify</span>
+            </a>
+          </div>
+          <div class="icon-text">
+            <a href="#">
+              <div>
+                <span class="icn icon user__icon"></span>
+              </div>
+              <span>Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="filter-window" style="display: none;">
+        <div>
+          <div class="filter-head">
+            <span class="filter-head__name">Filter</span>
+            <div>
+              <img
+                class="hide filter-head__img"
+                src="img/fonts/close.png"
+                alt="close"
+              />
+            </div>
+          </div>
+          <div class="price">
+            <span class="filter-name">Price ( $ )</span>
+            <button class="filter-button">0-200</button>
+            <button class="filter-button">200-400</button>
+            <button class="filter-button">400-600</button>
+            <button class="filter-button">More</button>
+          </div>
+          <div class="shape">
+            <span class="filter-name">Shape</span>
+            <button class="filter-button">Circle</button>
+            <button class="filter-button">Square</button>
+            <button class="filter-button">Rectangle</button>
+            <button class="filter-button">Triangle</button>
+          </div>
+          <div class="size">
+            <span class="filter-name">Size ( Width / Height )</span>
+            <button class="filter-button">0-200</button>
+            <button class="filter-button">200-400</button>
+            <button class="filter-button">400-600</button>
+            <button class="filter-button">More</button>
+            <button class="filter-button">0-200</button>
+            <button class="filter-button">200-400</button>
+            <button class="filter-button">400-600</button>
+            <button class="filter-button">More</button>
+          </div>
+        </div>
+        <div class="apply">
+          <button class="apply__button">Apply</button>
+        </div>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue-infinite-scroll@2.0.2/vue-infinite-scroll.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

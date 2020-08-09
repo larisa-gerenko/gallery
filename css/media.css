@@ -1,0 +1,137 @@
+/*Для темного стиля */
+@media (max-width: 600px) {
+  .dark .feed__icon {
+    background-image: url(../img/fonts/home@3x.svg);
+  }
+  .dark .menu__icon {
+    background-image: url(../img/fonts/menuwhite.svg);
+  }
+  .dark .add__icon {
+    background-image: url(../img/fonts/addwhite.svg);
+  }
+  .dark .chat__icon {
+    background-image: url(../img/fonts/chatwhite.svg);
+  }
+  .dark .user__icon {
+    background-image: url(../img/fonts/userwhite.svg);
+  }
+}
+
+/*Для меню */
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .header_right {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-left: 15px;
+  }
+  .header_left {
+    margin-left: 15px;
+  }
+  .header .button {
+    width: 25%;
+    font-size: 30px;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 50px;
+    font-size: 30px;
+  }
+  .search__icon {
+    width: 30px;
+    height: 30px;
+  }
+  .filter {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/*Для галереи */
+@media (max-width: 600px) {
+  .gallery .picture {
+    width: 25%;
+  }
+}
+/*Для фильтра*/
+
+@media (max-width: 600px) {
+  .filter-window {
+    width: 100%;
+    padding: 20px 90px 0;
+  }
+  .filter-head__name {
+    font-size: 70px;
+  }
+  .filter-head__img {
+    width: 50px;
+    height: 50px;
+  }
+  .filter-button {
+    width: 186px;
+    height: 100px;
+    font-size: 30px;
+    margin-right: 35px;
+  }
+  .filter-name {
+    font-size: 36px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  .apply {
+    width: 100%;
+  }
+  .apply__button {
+    width: 100%;
+    height: 150px;
+    font-size: 50px;
+  }
+}
+
+/*Для нижнего меню*/
+@media (max-width: 600px) {
+  .icon-text > a > span {
+    display: none;
+  }
+  .bar-container {
+    bottom: 0;
+    height: 125px;
+  }
+  .bar {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0;
+  }
+  .feed__icon {
+    width: 67px;
+    height: 64px;
+  }
+  .menu__icon {
+    width: 56px;
+    height: 57px;
+  }
+  .add__icon {
+    width: 54px;
+    height: 56px;
+  }
+  .chat__icon {
+    width: 60px;
+    height: 74px;
+  }
+  .user__icon {
+    width: 48px;
+    height: 50px;
+  }
+}

@@ -17,11 +17,51 @@
 .dark .search__input {
   background-color: #363636;
 }
+.dark .filter {
+  background-image: url(../img/fonts/mixerBig.svg);
+}
+.dark .bar {
+  background-color: #222222;
+}
+.dark .bar a {
+  color: #ffffff;
+}
+.dark .feed__icon {
+  background-image: url(../img/fonts/homewhite.svg);
+}
+.dark .menu__icon {
+  background-image: url(../img/fonts/menuwhite.svg);
+}
+.dark .add__icon {
+  background-image: url(../img/fonts/addwhite.svg);
+}
+.dark .chat__icon {
+  background-image: url(../img/fonts/chatwhite.svg);
+}
+.dark .user__icon {
+  background-image: url(../img/fonts/userwhite.svg);
+}
+.dark .filter-window {
+  background-color: #1b1b1b;
+}
+.dark .filter-head__name {
+  color: #979797;
+}
+.dark .filter-name {
+  color: #979797;
+}
+.dark .filter-window button {
+  background-color: #1b1b1b;
+  color: #ffffff;
+}
+
+/* Стили к документу */
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -30,7 +70,8 @@ body {
   margin: 0 auto;
 }
 
-/* Стили для меню  */
+/* Стили для header  */
+/* Логотип и меню  */
 
 .header {
   display: flex;
@@ -48,7 +89,7 @@ body {
 .header_left .button {
   margin-right: 18px;
 }
-.button {
+.header .button {
   display: inline-block;
   width: 86px;
   padding: 10px;
@@ -62,6 +103,9 @@ body {
 .header_left .logo {
   margin-right: 42px;
 }
+
+/* Поиск и фильтр  */
+
 .header_right {
   display: flex;
 }
@@ -89,4 +133,134 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 6px;
+}
+.icn {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*Стили для галереи*/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .picture {
+  width: 20%;
+}
+
+.gallery .picture img {
+  width: 100%;
+}
+
+/*Стили для нижнего меню*/
+
+.bar-container {
+  position: fixed;
+  display: flex;
+  bottom: 20px;
+  width: 100%;
+  left: 0;
+  justify-content: center;
+}
+.bar {
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 45px;
+}
+.bar .icon-text {
+  margin: 0 72px;
+  text-align: center;
+}
+.bar a {
+  text-decoration: none;
+}
+.icon {
+  display: inline-block;
+  margin-bottom: 13px;
+}
+
+.feed__icon {
+  width: 31px;
+  height: 30px;
+}
+.menu__icon {
+  width: 30px;
+  height: 30px;
+}
+.add__icon {
+  width: 30px;
+  height: 30px;
+}
+.chat__icon {
+  width: 33px;
+  height: 30px;
+}
+.user__icon {
+  width: 30px;
+  height: 30px;
+}
+
+/*Стили для фильтра*/
+
+.filter-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 414px;
+  height: 100%;
+  padding: 10px 10px 0 20px;
+}
+.filter-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-head__name {
+  font-size: 30px;
+}
+.filter-head__img {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+}
+.filter-name {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 20px;
+}
+.price {
+  margin-top: 35px;
+}
+.filter-button {
+  width: 86px;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px #363636;
+  margin-right: 6px;
+}
+.filter-button:last-child {
+  margin-right: 0;
+}
+.shape {
+  margin-top: 43px;
+}
+.size {
+  margin-top: 41px;
+}
+.size button {
+  margin-bottom: 21px;
+}
+.apply {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.apply__button {
+  width: 414px;
+  height: 60px;
+  border: none;
 }
